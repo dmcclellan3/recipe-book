@@ -33,7 +33,7 @@ const RecipeForm = ({ addRecipe }) => {
         />
       </label>
       <label>
-        Ingredients (comma separated):
+        Ingredients:
         <input
           type="text"
           value={ingredients}
