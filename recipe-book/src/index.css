@@ -121,3 +121,60 @@ label {
 .required-message.hidden {
   display: none;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .App {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  input[type="text"],
+  select,
+  button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .recipes {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-item {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  input[type="text"],
+  select,
+  button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .recipes {
+    gap: 15px;
+  }
+
+  .recipe-item {
+    padding: 8px;
+  }
+
+  .required-message {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
