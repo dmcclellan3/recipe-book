@@ -1,4 +1,4 @@
-/* /* body {
+body {
   background-color: #181818;
   color: #f0f0f0;
   font-family: Arial, sans-serif;
@@ -8,40 +8,46 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-} */
+}
 
 .App {
-  /* max-width: 800px; */
-  /* margin-left: 20px; */
   padding: 20px;
-  background-color: #747474;
+  background-color: #3a3a3a;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
 }
 
 h1 {
   text-align: center;
-  font-size: 3rem;
-  margin-bottom: 30px;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
 }
 
-input[type="text"] {
+input[type="text"],
+select {
   background-color: #525252;
   color: #f0f0f0;
   border: 1px solid #444;
   padding: 10px;
-  margin: 5px 0;
+  margin: 10px 0;
   border-radius: 5px;
   font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #007BFF;
 }
 
 input[type="text"]::placeholder {
@@ -52,23 +58,29 @@ button {
   background-color: #007BFF;
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
+  padding: 15px;
+  margin-top: 20px;
   font-size: 1.2rem;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
   background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
 }
 
 .recipes {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0;
 }
 
 .recipe-item {
@@ -88,20 +100,24 @@ button:hover {
   margin: 5px 0 0;
 }
 
-select {
-  background-color: #333;
-  color: #f0f0f0;
-  border: 1px solid #444;
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
 label {
   font-size: 1.2rem;
-  margin-right: 10px;
+  margin-bottom: 5px;
+  color: #f0f0f0;
 }
 
+.required-message {
+  color: #ff4c4c;
+  background-color: #fff0f0;
+  padding: 10px;
+  border: 1px solid #ff4c4c;
+  border-radius: 5px;
+  margin: 15px 0;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 76, 76, 0.2);
+}
 
-
+.required-message.hidden {
+  display: none;
+}
