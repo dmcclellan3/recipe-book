@@ -1,5 +1,5 @@
 body {
-  background-color: #4a4949;
+  background-color: #b2b2b2;
   color: #7c7b7b;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -8,6 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow: scroll;
 }
 
 .App {
@@ -19,6 +20,7 @@ body {
   width: 90vw;
   height: 90vh;
   margin: auto;
+  overflow: scroll;
 }
 
 h1 {
@@ -85,11 +87,13 @@ button:disabled {
 }
 
 .recipe-item {
-  background-color: #555555;
+  background-color: #444444;
+  color: #8b8a8a;
   padding: 15px;
   margin: 10px 0;
   border-radius: 5px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
 .recipe-item h3 {
@@ -104,7 +108,7 @@ button:disabled {
 label {
   font-size: 1.2rem;
   margin-bottom: 5px;
-  color: #696767;
+  color: #9d9c9c;
 }
 
 .required-message {
