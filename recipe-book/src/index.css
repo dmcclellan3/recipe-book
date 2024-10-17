@@ -39,7 +39,7 @@ form {
 input[type="text"],
 select {
   background-color: #525252;
-  color: #8b8a8a;
+  color: #bfbebe;
   border: 1px solid #444;
   padding: 10px;
   margin: 10px 0;
@@ -88,7 +88,7 @@ button:disabled {
 
 .recipe-item {
   background-color: #444444;
-  color: #8b8a8a;
+  color: #d9d6d6;
   padding: 15px;
   margin: 10px 0;
   border-radius: 5px;
