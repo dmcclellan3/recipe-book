@@ -1,6 +1,6 @@
 body {
-  background-color: #b2b2b2;
-  color: #7c7b7b;
+  background-color: #f0f0f0; /* Lighter background for better contrast */
+  color: #333333; /* Darker text for better readability */
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -13,9 +13,9 @@ body {
 
 .App {
   padding: 20px;
-  background-color: #151515;
+  background-color: #ffffff; /* Lightened container background */
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Softer, lighter shadow */
   max-width: 1200px;
   width: 90vw;
   height: 90vh;
@@ -27,8 +27,8 @@ h1 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #fff;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  color: #222222; /* Darker header color for better contrast */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow to give it some depth */
 }
 
 form {
@@ -38,27 +38,28 @@ form {
 
 input[type="text"],
 select {
-  background-color: #525252;
-  color: #bfbebe;
-  border: 1px solid #444;
-  padding: 10px;
+  background-color: #e8e8e8; /* Lighter input background for contrast */
+  color: #333333; /* Dark text for better readability */
+  border: 1px solid #999999; /* Slightly darker border */
+  padding: 12px;
   margin: 10px 0;
   border-radius: 5px;
   font-size: 1rem;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, background-color 0.3s;
 }
 
 input[type="text"]:focus,
 select:focus {
-  border-color: #007BFF;
+  border-color: #ff9800; /* Bright orange for focus */
+  background-color: #f2f2f2; /* Slightly lighter background on focus */
 }
 
 input[type="text"]::placeholder {
-  color: #c7c7c7;
+  color: #666666; /* Darker placeholder for visibility */
 }
 
 button {
-  background-color: #007BFF;
+  background-color: #ff9800; /* Bright orange button for higher contrast */
   color: #fff;
   border: none;
   padding: 15px;
@@ -70,12 +71,12 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #e68a00; /* Slightly darker on hover */
   transform: translateY(-2px);
 }
 
 button:disabled {
-  background-color: #666;
+  background-color: #cccccc; /* More visible disabled button */
   cursor: not-allowed;
 }
 
@@ -87,18 +88,25 @@ button:disabled {
 }
 
 .recipe-item {
-  background-color: #444444;
-  color: #d9d6d6;
+  background-color: #ffffff; /* Lighter card background for contrast */
+  color: #333333; /* Darker text */
   padding: 15px;
   margin: 10px 0;
   border-radius: 5px;
+  border: 1px solid #dddddd; /* Light border for recipe cards */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+.recipe-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lift and shadow on hover */
 }
 
 .recipe-item h3 {
   margin: 0;
   font-size: 1.5rem;
+  color: #222222; /* Darker header text for cards */
 }
 
 .recipe-item p {
@@ -108,7 +116,7 @@ button:disabled {
 label {
   font-size: 1.2rem;
   margin-bottom: 5px;
-  color: #9d9c9c;
+  color: #555555; /* Darker label text */
 }
 
 .required-message {
