@@ -1,193 +1,78 @@
-body {
-  background-color: #f0f0f0; /* Lighter background for better contrast */
-  color: #333333; /* Darker text for better readability */
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  overflow: scroll;
-}
-
 .App {
-  padding: 20px;
-  background-color: #ffffff; /* Lightened container background */
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Softer, lighter shadow */
-  max-width: 1200px;
-  width: 90vw;
-  height: 90vh;
   margin: auto;
-  overflow: scroll;
+  padding: 20px;
+  background-color: #2c2c54; /* Deep purple for a sleek look */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  max-width: 800px;
 }
 
 h1 {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #222222; /* Darker header color for better contrast */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow to give it some depth */
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #ffdd59; /* Bright yellow for contrast */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 form {
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 
-input[type="text"],
-select {
-  background-color: #e8e8e8; /* Lighter input background for contrast */
-  color: #333333; /* Dark text for better readability */
-  border: 1px solid #999999; /* Slightly darker border */
-  padding: 12px;
+input[type="text"], select {
+  background-color: #40407a; /* Subtle blue-purple for fields */
+  color: #dcdde1;
+  border: 2px solid #4bcffa; /* Vibrant blue border for focus */
+  padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
   font-size: 1rem;
-  transition: border-color 0.3s, background-color 0.3s;
-}
-
-input[type="text"]:focus,
-select:focus {
-  border-color: #ff9800; /* Bright orange for focus */
-  background-color: #f2f2f2; /* Slightly lighter background on focus */
 }
 
 input[type="text"]::placeholder {
-  color: #666666; /* Darker placeholder for visibility */
+  color: #7f8fa6;
 }
 
 button {
-  background-color: #ff9800; /* Bright orange button for higher contrast */
-  color: #fff;
+  background-color: #34e7e4; /* Aqua for a standout call-to-action */
+  color: #2c2c54;
   border: none;
-  padding: 15px;
-  margin-top: 20px;
+  padding: 12px 25px;
+  margin-top: 15px;
   font-size: 1.2rem;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-  background-color: #e68a00; /* Slightly darker on hover */
-  transform: translateY(-2px);
-}
-
-button:disabled {
-  background-color: #cccccc; /* More visible disabled button */
-  cursor: not-allowed;
+  background-color: #0be881; /* Brighter green for hover effect */
+  color: #ffffff;
 }
 
 .recipes {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  list-style-type: none;
   padding: 0;
 }
 
 .recipe-item {
-  background-color: #ffffff; /* Lighter card background for contrast */
-  color: #333333; /* Darker text */
+  background-color: #57606f; /* Neutral gray for list items */
+  color: #f5f6fa;
   padding: 15px;
   margin: 10px 0;
   border-radius: 5px;
-  border: 1px solid #dddddd; /* Light border for recipe cards */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Softer shadow */
-}
-
-.recipe-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lift and shadow on hover */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .recipe-item h3 {
   margin: 0;
   font-size: 1.5rem;
-  color: #222222; /* Darker header text for cards */
+  color: #ffdd59; /* Matching bright yellow */
 }
 
 .recipe-item p {
   margin: 5px 0 0;
-}
-
-label {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-  color: #555555; /* Darker label text */
-}
-
-.required-message {
-  color: #ff4c4c;
-  background-color: #fff0f0;
-  padding: 10px;
-  border: 1px solid #ff4c4c;
-  border-radius: 5px;
-  margin: 15px 0;
-  font-size: 1rem;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(255, 76, 76, 0.2);
-}
-
-.required-message.hidden {
-  display: none;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .App {
-    padding: 15px;
-  }
-
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-  }
-
-  input[type="text"],
-  select,
-  button {
-    font-size: 1rem;
-    padding: 10px;
-  }
-
-  .recipes {
-    grid-template-columns: 1fr;
-  }
-
-  .recipe-item {
-    padding: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .App {
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 1.75rem;
-  }
-
-  input[type="text"],
-  select,
-  button {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
-
-  .recipes {
-    gap: 15px;
-  }
-
-  .recipe-item {
-    padding: 8px;
-  }
-
-  .required-message {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
+  color: #dcdde1;
 }
